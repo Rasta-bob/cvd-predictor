@@ -1,0 +1,31 @@
+{
+  "best_model_name": "Random Forest",
+  "best_params": {
+    "model__max_depth": 6,
+    "model__min_samples_leaf": 2,
+    "model__min_samples_split": 2,
+    "model__n_estimators": 400
+  },
+  "target": "HeartDisease",
+  "numeric_features": [
+    "Age",
+    "RestingBP",
+    "Cholesterol",
+    "FastingBS",
+    "MaxHR",
+    "Oldpeak"
+  ],
+  "categorical_features": [
+    "Sex",
+    "ChestPainType",
+    "RestingECG",
+    "ExerciseAngina",
+    "ST_Slope"
+  ],
+  "invalid_zero_values_imputed": [
+    "RestingBP",
+    "Cholesterol"
+  ],
+  "train_test_split": "70% train / 30% test",
+  "selection_rule": "Highest test ROC-AUC, then F1-score and recall"
+}
